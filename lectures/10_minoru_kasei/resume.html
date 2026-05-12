@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プラスチックが支える持続可能な技術（仮） ─ 岡山県立大学 寄付講座 第10回 レジュメ</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #555;
+    --accent: #0b5394;
+    --accent-soft: #e8f0fa;
+    --border: #d0d7de;
+    --bg: #ffffff;
+    --table-stripe: #f6f8fa;
+  }
+  * { box-sizing: border-box; }
+  html { font-size: 16px; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Meiryo", "Noto Sans CJK JP", sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.75;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin: 0 0 0.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--accent);
+    color: var(--accent);
+  }
+  h1 .subtitle {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--muted);
+    margin-top: 0.4rem;
+  }
+  h2 {
+    font-size: 1.35rem;
+    margin: 2.5rem 0 1rem;
+    padding: 0.4rem 0.75rem;
+    background: var(--accent-soft);
+    border-left: 5px solid var(--accent);
+    color: var(--accent);
+  }
+  h3 {
+    font-size: 1.1rem;
+    margin: 1.8rem 0 0.6rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+  h4 {
+    font-size: 1rem;
+    margin: 1.4rem 0 0.5rem;
+    color: var(--accent);
+  }
+  p { margin: 0.6rem 0; }
+  ul, ol { padding-left: 1.6rem; margin: 0.6rem 0; }
+  li { margin: 0.25rem 0; }
+  strong { color: #0a3b6b; }
+  hr {
+    border: 0;
+    border-top: 1px dashed var(--border);
+    margin: 2rem 0;
+  }
+  blockquote {
+    border-left: 4px solid var(--border);
+    background: #fafbfc;
+    margin: 1rem 0;
+    padding: 0.6rem 1rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .meta {
+    background: #fafbfc;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+  .meta ul { list-style: none; padding: 0; margin: 0; }
+  .meta li { margin: 0.2rem 0; }
+  .meta .label {
+    display: inline-block;
+    min-width: 4em;
+    font-weight: bold;
+    color: var(--accent);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 0.93rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  tbody tr:nth-child(even) { background: var(--table-stripe); }
+  .todo {
+    color: #b54708;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+  .footnote {
+    font-size: 0.9rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+  }
+  @media print {
+    body { padding: 1cm 1.2cm; max-width: none; }
+    h2 { page-break-after: avoid; }
+    h3, h4 { page-break-after: avoid; }
+    table, blockquote, .meta { page-break-inside: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<h1>
+  プラスチックが支える持続可能な技術（仮）
+  <span class="subtitle">岡山県立大学 寄付講座「技術者と社会」 第10回 レジュメ</span>
+</h1>
+
+<div class="meta">
+  <ul>
+    <li><span class="label">日時</span>2026年11月16日（月） 5時限 16:00〜17:30（90分）</li>
+    <li><span class="label">場所</span>8903 講義室</li>
+    <li><span class="label">担当</span>みのる化成株式会社</li>
+    <li><span class="label"></span>前半：坪井 裕之　「持続可能な社会に向けての取り組み」</li>
+    <li><span class="label"></span>後半：山下 泰弘　「IoT と AI が変える製造現場 ─ 技術者に求められるもの」</li>
+    <li><span class="label">対象</span>岡山県立大学 工学部 学生</li>
+  </ul>
+</div>
+
+<h2>1. 講義のねらい</h2>
+<ul>
+  <li>ものづくり企業が「持続可能性」と「デジタル化（IoT/AI）」という、外から押し寄せる二つの大きな潮流にどう向き合っているかを、現場の視点で伝える。</li>
+  <li>素材（プラスチック）の話と、製造現場のデジタル化の話を一つの講義の中でつなげ、<strong>技術者の仕事が "素材＋情報" の両輪で動いている</strong> ことを実感してもらう。</li>
+  <li>「技術者と社会」というテーマに照らし、企業の中の技術者がどのような判断・葛藤・工夫をしているかを、学生のキャリア選択の参考材料として提示する。</li>
+</ul>
+
+<h2>2. 到達目標</h2>
+<p>聴講後、学生は以下を説明できる状態になることを目指す。</p>
+<ol>
+  <li>プラスチック産業が直面する持続可能性の課題と、企業が取りうる技術的アプローチを整理して説明できる。</li>
+  <li>製造現場における IoT／AI 活用の典型パターン（見える化・予兆保全・品質予測・自動化）を例示できる。</li>
+  <li>「素材技術」と「情報技術」を組み合わせて社会課題に応えるという、現代の製造業の技術者像を自分の言葉で語れる。</li>
+</ol>
+
+<h2>3. 講義構成（90分）</h2>
+<table>
+  <thead>
+    <tr><th>時間</th><th>パート</th><th>セクション</th><th>担当</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>0:00–0:10</td><td>導入</td><td>自己紹介・会社紹介・本日のゴール</td><td>坪井／山下</td></tr>
+    <tr><td>0:10–0:45</td><td>前半</td><td>持続可能な社会に向けての取り組み</td><td>坪井</td></tr>
+    <tr><td>0:45–0:50</td><td>切替</td><td>前半まとめ → 後半へのブリッジ</td><td>坪井 → 山下</td></tr>
+    <tr><td>0:50–1:25</td><td>後半</td><td>IoT と AI が変える製造現場</td><td>山下</td></tr>
+    <tr><td>1:25–1:30</td><td>まとめ</td><td>全体総括・Q&amp;A</td><td>坪井／山下</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>4. 前半：持続可能な社会に向けての取り組み（坪井）</h2>
+
+<h3>4.1 みのる化成について</h3>
+<blockquote><span class="todo">（TODO: 沿革・所在地・従業員数・主要製品・主要市場を 5〜7 行で整理）</span></blockquote>
+
+<h3>4.2 プラスチックが社会を支える領域</h3>
+<ul>
+  <li>自動車・モビリティ（軽量化による燃費・電費改善）</li>
+  <li>医療・衛生（使い捨て器具による感染対策）</li>
+  <li>食品・物流（鮮度保持、輸送効率）</li>
+  <li>福祉・生活用品（軽さ・成形自由度を活かした製品）</li>
+  <li>インフラ・建材（耐久性・耐候性）</li>
+</ul>
+
+<h3>4.3 プラスチック産業が直面する課題</h3>
+<ul>
+  <li>海洋プラスチック問題と廃棄物管理</li>
+  <li>化石資源依存と CO₂ 排出</li>
+  <li>国内外の規制動向（拡大生産者責任、再生材使用義務 等）</li>
+  <li>「使う／使わない」の二項対立ではなく、<strong>どう使い、どう循環させるか</strong> という問い</li>
+</ul>
+
+<h3>4.4 持続可能性に貢献する技術アプローチ</h3>
+<table>
+  <thead>
+    <tr><th>アプローチ</th><th>概要</th><th>みのる化成での取り組み（仮）</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>軽量化</td><td>構造設計・成形技術で部品を軽くし、輸送・使用時のエネルギー消費を削減</td><td class="todo">（TODO: 具体事例）</td></tr>
+    <tr><td>マテリアルリサイクル</td><td>使用済み樹脂を再生材として再投入</td><td class="todo">（TODO: 具体事例）</td></tr>
+    <tr><td>バイオマス・生分解性樹脂</td><td>植物由来原料／環境分解性素材の採用</td><td class="todo">（TODO: 具体事例）</td></tr>
+    <tr><td>長寿命化・代替化</td><td>製品寿命を延ばす設計、金属など他素材の置き換えによる省資源化</td><td class="todo">（TODO: 具体事例）</td></tr>
+  </tbody>
+</table>
+
+<h3>4.5 前半のまとめ</h3>
+<ul>
+  <li>持続可能性は規制対応の話ではなく、<strong>素材選定・設計・製造工程の全段階に染み出している経営課題</strong> である。</li>
+  <li>技術者一人ひとりの設計判断が、長期的な環境負荷を決めている。</li>
+</ul>
+
+<hr>
+
+<h2>5. 後半：IoT と AI が変える製造現場 ─ 技術者に求められるもの（山下）</h2>
+
+<h3>5.1 なぜいま製造現場のデジタル化なのか</h3>
+<p>製造現場のデジタル化は流行ではなく、<strong>避けようがない圧力</strong> として外から押し寄せている。代表的なものを4つ挙げる。</p>
+
+<h4>5.1.1 人手不足は「すぐそこの問題」</h4>
+<p>人口の山を、いまの <strong>50歳</strong> と <strong>20歳</strong>、そして <strong>昨年生まれた赤ちゃん</strong> で比べると、減り方は想像以上である（※当日の最新統計値で更新）。</p>
+<table>
+  <thead>
+    <tr><th>区分</th><th>おおよその人口</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>現在50歳前後（1975年生まれ世代＝講師の世代）</td><td>約190万人</td></tr>
+    <tr><td>現在20歳前後（2005年生まれ世代＝みなさん）</td><td>約110万人</td></tr>
+    <tr><td>直近の出生数（2024年）</td><td>約72万人（過去最少）</td></tr>
+  </tbody>
+</table>
+<p>つまり、<strong>今後20〜30年の間に、製造現場で働き手として期待できる人口は半分以下</strong> になる。みのる化成も実際に人材獲得には苦労していて、<strong>だからこそ岡山県立大学にこうしてお邪魔している</strong> 面もある。</p>
+<p>人がいないなら、<strong>残る人が、より少ない手数で、より高い価値を出さなければならない</strong>。これがデジタル化の最も切迫した動機である。</p>
+
+<h4>5.1.2 多品種少量化が当たり前になっている</h4>
+<p>ものづくりの現場というと、ベルトコンベアの上をたくさんの製品が流れていく光景を思い浮かべるかもしれない。しかし、<strong>現代の工場でそういう「同じ物だけを大量に流すライン」はむしろ珍しい</strong>。</p>
+<p>理由はみなさん自身の感覚を考えるとイメージしやすい。</p>
+<ul>
+  <li>そもそも <strong>人と同じものはあまり使いたくない</strong>。</li>
+  <li>iPhone のように「これがいい」と多くの人が選ぶ製品ですら、<strong>メモリ容量・カラー・ストレージ</strong> などで自分用にカスタムする。</li>
+</ul>
+<p>ユーザーがそうなれば、作る側も同じ部品を100万個まとめて流すことはできない。<strong>少量多品種・短納期</strong> で作るしかない。これがそのままラインの組み換え頻度・段取り替えの多さ・データ管理の複雑さに跳ね返ってくる。</p>
+
+<h4>5.1.3 品質保証はブランドそのものになっている</h4>
+<p>品質保証は文字どおり、<strong>いつ・どこで・誰が・どんな条件で作ったか</strong> を保証することである。</p>
+<ul>
+  <li>当社グループでは農業関連の事業も行っているが、いまは野菜にすら「<strong>私たちが作りました</strong>」と生産者の写真が載るのが普通になった。これはそれ自体が <strong>付加価値</strong> になっている。</li>
+  <li>工業製品でも同じで、何か問題があったときに「いつ／どこで／誰が／どの条件で作ったか」がたどれることは、<strong>原因追及と改善の出発点</strong> であると同時に、<strong>顧客の安心 → ブランド価値</strong> につながる。</li>
+</ul>
+<p>そして、これを人手の記録だけで支えるのはもう限界に来ている。だからデータで取り、データで残す方向に進まざるをえない。</p>
+
+<h4>5.1.4 環境負荷の見える化が経営の必須条件になっている</h4>
+<p>この点は、<strong>みなさんのほうが感度が高い</strong> かもしれない。SDGs について調べた経験は多くの人にあるはずで、そのとき扱った数字 ── CO₂ 排出量、電力消費量、廃棄物の推移、リサイクル率 ── は、その多くが <strong>各企業から公表されている数値</strong> を使っている。</p>
+<p>これは産業側から見るとかなり大きな変化で、以前はやっていなかった <strong>集計・調査・第三者報告のための作業がどんどん増えている</strong>。</p>
+<p>経営の側から見ると、これは少し厳しい構造をしている。</p>
+<ul>
+  <li>社会的には間違いなく必要。</li>
+  <li>だが、それに費用を払っても <strong>直接の儲けは増えない</strong>。</li>
+  <li>かといって <strong>やらなければ信用を失い、取引そのものが細っていく</strong>。</li>
+</ul>
+<p>つまり「コストはかかる、儲かりはしない、でもやらないと負ける」──これが今の環境対応の現実である。だから企業としては、<strong>できるだけ手間をかけずに</strong> 実現したい。<strong>自動化したい</strong> という強い要求が、ここからも生まれている。</p>
+
+<hr>
+
+<p>人手不足、多品種少量、品質保証、環境負荷。<strong>この4つはいずれも "より少ない人で、より細かい単位の情報を扱う" 方向への圧力</strong> であり、IoT と AI に頼らざるをえない理由は、ここにすべて含まれている。</p>
+
+<h3>5.2 みのる化成における IoT の取り組み</h3>
+
+<h4>5.2.1 製造ラインのリアルタイム可視化</h4>
+<p>製造ラインのリアルタイム情報を可視化することを軸に進めている。具体的には次のような指標を扱う。</p>
+<ul>
+  <li><strong>稼働状況</strong>（設備が動いているか／止まっているか）</li>
+  <li><strong>異常停止</strong>（いつ、どのラインで、何が原因で止まったか）</li>
+  <li><strong>不良発生数</strong>（種類別・時間帯別）</li>
+  <li><strong>タクトタイム推移</strong>（理論値と実績のかい離）</li>
+</ul>
+<p>少量多品種の工場では <strong>ライン数が多く、ライン組み換えも頻繁</strong> に発生する。そのため自動化・可視化のハードルは高く、従来は次のようなフルセットを組まないと成立しなかった。</p>
+<ul>
+  <li>センサ設置</li>
+  <li>通信インフラ</li>
+  <li>オンプレミスサーバ</li>
+  <li>専用ソフトウェア</li>
+</ul>
+<p>これらを揃えると、<strong>1工場あたり数百万〜数千万円規模</strong> のコストがかかるのが当たり前だった。</p>
+<p><strong>いまは、自作のアプローチで 100万円以下でも実現できるようになっている</strong>。みのる化成でも自作例が増えており、<strong>最近の技術革新によって、自作で対応できる適用範囲がさらに広がってきている</strong>。なぜそれが可能になったのかは、次の節（5.3）で背景を整理する。</p>
+
+<h4>5.2.2 最近の開発事例：カメラ検査機の自作</h4>
+<p>直近の取り組みとして、<strong>外観検査用のカメラ検査機を自作</strong> している。</p>
+<table>
+  <thead>
+    <tr><th>項目</th><th>従来（市販メーカー品）</th><th>自作</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>代表例</td><td>キーエンス等の専用画像検査装置</td><td>市販カメラ＋Raspberry Pi＋リユース PC サーバ</td></tr>
+    <tr><td>概算コスト</td><td>100 万円〜数百万円／台</td><td>カメラ約2万円 ＋ Raspberry Pi 約2万円 ＋ サーバ（社内再利用）</td></tr>
+    <tr><td>立ち上げの速さ</td><td>仕様調整・見積・納期</td><td>現場で試して、その日のうちに動かせる</td></tr>
+  </tbody>
+</table>
+<p>ポイントは単に「安い」ことではなく、<strong>AI 活用周りは進化が早すぎて、メーカー品を待って買うより自分たちで作ったほうが早いケースが出てきた</strong> ことにある。価格・スピード・柔軟性のいずれにおいても、自作のほうが優位に立つ場面が現実に増えている。</p>
+
+<h3>5.3 この10年で何が変わったか ─ ものづくりの民主化</h3>
+<p>IoT や Industry 4.0 という言葉自体は 20 年ほど前から存在する。だがこの10年で <strong>やれることのコスト感が一段違うレベルで下がった</strong>。背景には3つの変化がある。</p>
+<ol>
+  <li><strong>エッジ端末の普及</strong>: Raspberry Pi、ESP32 など、数千円〜1万円台で手に入る計算機・センサノードが揃った。</li>
+  <li><strong>OSS 文化の成熟</strong>: 可視化（Grafana など）、データ収集（MQTT、InfluxDB など）、機械学習（scikit-learn、PyTorch など）の主要ツールが無償で使える。</li>
+  <li><strong>Maker ムーブメント</strong>: 3D プリンタや個人のものづくり文化が広がり、<strong>自作・自前開発が当たり前</strong> になった。</li>
+</ol>
+<p>これらが重なって、<strong>自前で IoT システムを組み立てるハードルが劇的に下がった</strong>。数千万円の専用システムでなく、数万円〜数十万円のスケールで現場を可視化できる時代になった。</p>
+
+<h3>5.4 LLM とエージェント型 AI が変える「働き方」</h3>
+<p>直近で起きているもう一段の変化が LLM（大規模言語モデル）である。</p>
+<ul>
+  <li><strong>初期の LLM</strong>: 「いろいろ教えてくれる」存在 → 学習効率の向上に寄与。</li>
+  <li><strong>直近1年で進化したエージェント型 LLM</strong>: <strong>作業効率そのものを効率化</strong> する存在になった。社員一人の下にアシスタントの部下が数人つくのと同じレベルで仕事が進む。</li>
+</ul>
+<p>ただし、効果を引き出すには前提条件がある。</p>
+<ul>
+  <li><strong>業務内容の構造化</strong>: どの作業が、どんな順序で、何をインプット／アウトプットとしているのかを明文化する。</li>
+  <li><strong>業務情報の構造化</strong>: ドキュメント・データ・ナレッジを、人と AI の両方が読める形に整える。</li>
+</ul>
+<p>この構造化が進めば進むほど、AI による効率化の伸び幅は大きくなる。</p>
+
+<h4>「AI レディ」という考え方</h4>
+<p>このような <strong>AI を活用しやすい業務スタイル・タスクの状態</strong> を、私（山下）は個人的に <strong>「AI レディ（AI Ready）」</strong> と呼んでいる。従来の業務体系を AI レディに作り変えていくこと ── これからの企業にとって、ここが大きな分岐点になる。</p>
+
+<h3>5.5 デジタル化と AI が変える「技術者の仕事」</h3>
+<ul>
+  <li>機械系・電気系・情報系の境界が薄くなっている。</li>
+  <li>現場の課題を <strong>データで言語化</strong> できる人が強い。</li>
+  <li>「PoC で終わらせず、現場で使い続けられる仕組みにする」ところに難しさと面白さがある。</li>
+  <li>必要になるスキルセット
+    <ul>
+      <li>プログラミング・データ分析の基礎（Python、SQL、可視化）</li>
+      <li>機械学習・LLM の基礎概念（できること／できないこと、評価の考え方）</li>
+      <li>制御・ネットワーク・センサの最低限の知識</li>
+      <li><strong>何より「現場を理解する力」と「業務を構造化する力」</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h3>5.6 学生のみなさんへ ── あなたたちの世代の武器</h3>
+<p>ここで一度、聴いてくれているみなさん自身の話をしたい。</p>
+<ul>
+  <li>みなさんは、<strong>中学・高校で「情報」を必修科目として学習してきた世代</strong> である。中学校では2002年度から、高校では2003年度から教科「情報」が必修化されており、特に2022年度入学以降の高校生は <strong>「情報Ⅰ」</strong>（プログラミングを含む）を必修で履修している。</li>
+  <li>これは、<strong>われわれ講師（山下は1975年生まれの50代）はもちろん受けていない</strong>。それだけでなく、<strong>みなさんから見れば少し先輩にあたる20代後半〜30代の社会人世代でも、学校で体系的にこのレベルの情報教育を受けてはいない</strong>。プログラミングを必修でやってきた世代は、社会全体で見るとまだごく薄い層しかいない。</li>
+  <li>みなさんが受けてきた情報の授業には、<strong>かなり専門的な内容も含まれている</strong>。それは <strong>みなさんの世代のストロングポイント</strong> になりうる。</li>
+</ul>
+<p>そして、世の中の側もちょうど変わりつつある。</p>
+<ul>
+  <li><strong>LLM 以前</strong> は、「パソコンが普通に使える」程度のリテラシーで十分とされる職場が多かった。</li>
+  <li><strong>LLM 以降</strong> は、データを構造化し、AI を使いこなし、業務を AI レディに作り変えていく力が求められる。<strong>情報リテラシーの重要性は、これからさらに一段高まる</strong>。</li>
+  <li>その結果、<strong>情報を扱える人材が必要とされる職種・人数は増える</strong>。製造業のような、これまで「情報系の仕事」と見なされてこなかった現場でもである。</li>
+</ul>
+<p>だからこそ伝えたいことがある。</p>
+<ul>
+  <li>会社に入ったとき、みなさんは <strong>いきなり「教える側」に回る可能性すらある</strong>。新人だから教わるばかり、という時代ではなくなりつつある。</li>
+  <li>自分が中高で身につけた情報の素地を <strong>武器として磨き続け、ぜひ社会に挑戦してほしい</strong>。</li>
+</ul>
+
+<h3>5.7 後半のまとめ</h3>
+<ul>
+  <li>IoT も AI も道具であり、目的ではない。<strong>現場の課題に紐づかない技術は使われない</strong>。</li>
+  <li>一方で、ハードと OSS と LLM の進化により、<strong>個人や中堅企業でも自前で仕組みを作れる時代</strong> に入った。</li>
+  <li>これからの技術者の競争力は、「業務を AI レディに作り変えられるかどうか」に大きく依存する。</li>
+  <li>そして、<strong>情報を学んできたみなさんの世代は、その変化の波に最も乗りやすい立場にいる</strong>。</li>
+</ul>
+
+<hr>
+
+<h2>6. 全体まとめ</h2>
+<ul>
+  <li>持続可能性（前半）も、IoT／AI（後半）も、<strong>社会から製造業に突きつけられている要請への応答</strong> という点で同じ構造をしている。</li>
+  <li>どちらも「現場を深く知っている人」が、新しい技術と接続して初めて成果になる。</li>
+  <li>学生時代に磨いてほしいこと：<strong>基礎学力／データを扱う力／現場を見る目</strong>。</li>
+  <li>そして、中高で情報を学んできた <strong>みなさんの世代のストロングポイント</strong> を、社会の中で存分に伸ばしてほしい。</li>
+</ul>
+
+<h2>7. キーワード</h2>
+<p>プラスチック成形（射出成形・ブロー成形）／軽量化／リサイクル材／バイオマスプラスチック／LCA（ライフサイクルアセスメント）／カーボンニュートラル／IoT／Industry 4.0／エッジ端末（Raspberry Pi、ESP32）／OSS／Maker ムーブメント／ものづくりの民主化／LLM／エージェント型 AI／業務の構造化／AI レディ（AI Ready）／三現主義</p>
+
+<h2>8. 参考情報</h2>
+<ul>
+  <li>経済産業省「プラスチック資源循環戦略」</li>
+  <li>環境省「プラスチック資源循環促進法」関連資料</li>
+  <li>経済産業省「ものづくり白書」（DX・人材関連の章）</li>
+  <li>日本プラスチック工業連盟 公表データ</li>
+  <li>みのる化成株式会社 コーポレートサイト</li>
+</ul>
+
+<p class="footnote">※ 本レジュメは案であり、講義当日の構成・内容は変更される場合があります。</p>
+
+</body>
+</html>
